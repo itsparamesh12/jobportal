@@ -6,8 +6,6 @@ Screen shots
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2bda5b19-c855-431f-a5c9-ca3c93d10865" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/eeaf9f0b-36ea-4fdc-acd8-e35137deeeac" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dcbd5745-e98a-40cc-bef8-3c4f03da354f" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6b6ed790-36bc-4445-985e-0d3a6ec616dd" />
 
 <img width="1918" height="1016" alt="image" src="https://github.com/user-attachments/assets/be6a10b1-8777-4c28-b986-ab17e3eca793" />
 
