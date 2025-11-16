@@ -1,0 +1,446 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.jpcontainer {
+  width: 100%;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  overflow-x: hidden;
+}
+
+/* Header */
+.jpcontainer .header {
+  width: 100%;
+  height: 60px;
+  background: white;
+  padding: 0 20px;
+  border-bottom: 2px solid #2d7abe;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.jpcontainer .header label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2d7abe;
+}
+
+/* Content - Fixed for no horizontal scroll */
+.jpcontainer .content {
+  width: 100%;
+  min-height: calc(100vh - 120px);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Footer */
+.jpcontainer .footer {
+  width: 100%;
+  height: 60px;
+  background: white;
+  padding: 0 20px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  bottom: 0;
+}
+
+.jpcontainer .footer button {
+  width: 120px;
+  height: 40px;
+  background: #2d7abe;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.jpcontainer .footer button:hover {
+  background: #1a5a8a;
+}
+
+/* Popup - Fixed positioning */
+.jpcontainer .popup {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.jpcontainer .popup .popupwindow {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.popupheader {
+  background: #2d7abe;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popupheader label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.popupheader span {
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.popupcontent {
+  padding: 20px;
+  width: 100%;
+}
+
+.popupcontent label {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.popupcontent input, .popupcontent textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.popupcontent textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.popupcontent button {
+  width: 100%;
+  height: 40px;
+  background: #2d7abe;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.popupcontent button:hover {
+  background: #1a5a8a;
+}
+
+/* Delete Dialog */
+.delete-dialog {
+  max-width: 400px !important;
+}
+
+.delete-dialog .popupheader {
+  background: #dc3545;
+}
+
+.dialog-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.delete-btn, .cancel-btn {
+  flex: 1;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}
+
+.cancel-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #5a6268;
+}
+
+/* Job Results - Fixed for no horizontal scroll */
+.result {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #2d7abe;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.job-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2d7abe;
+  flex: 1;
+  min-width: 200px;
+}
+
+.job-badges {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.salary {
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  background: #e8f5e8;
+  color: #388e3c;
+  border: 1px solid #388e3c;
+  white-space: nowrap;
+}
+
+.job-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.job-actions img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.job-actions img:hover {
+  opacity: 1;
+}
+
+.company-info {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.job-description {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 6px;
+  border-left: 3px solid #e9ecef;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.no-jobs {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 16px;
+  background: white;
+  border-radius: 8px;
+  margin: 20px;
+  width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .jpcontainer .content {
+    padding: 10px;
+  }
+  
+  .result {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .job-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .job-title {
+    min-width: auto;
+  }
+  
+  .job-badges {
+    align-self: flex-start;
+  }
+  
+  .job-actions {
+    align-self: flex-start;
+  }
+  
+  .jpcontainer .popup .popupwindow {
+    margin: 10px;
+  }
+}
+/* Add these to your JobPosting.css file */
+
+.compact-jobs {
+  gap: 8px;
+}
+
+.compact-result {
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  border: 1px solid #e1e5e9;
+  border-radius: 8px;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.compact-result:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.job-header-compact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.job-main-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.job-title-compact {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.company-location-compact {
+  font-size: 14px;
+  color: #718096;
+  margin-bottom: 6px;
+}
+
+.job-side-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.salary-compact {
+  background: #e6fffa;
+  color: #234e52;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.job-actions-compact {
+  display: flex;
+  gap: 8px;
+}
+
+.job-actions-compact img {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.job-actions-compact img:hover {
+  opacity: 1;
+}
+
+.job-description-compact {
+  font-size: 13px;
+  color: #4a5568;
+  line-height: 1.4;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #f1f1f1;
+}
+
+.no-jobs {
+  text-align: center;
+  padding: 40px 20px;
+  color: #718096;
+  font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .job-header-compact {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .job-side-info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .compact-result {
+    padding: 10px 12px;
+  }
+}

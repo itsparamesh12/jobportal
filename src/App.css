@@ -1,0 +1,282 @@
+/* MAIN CONTAINER */
+#container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+#header {
+  width: 100%;
+  height: 70px;
+  background: white;
+}
+#header .logo {
+  width: 40px;
+  position: relative;
+  top: 15px;
+  margin-left: 10px;
+  float: left;
+}
+#header .logoText {
+  position: relative;
+  top: 15px;
+  font-size: 16pt;
+  font-weight: bold;
+  margin-left: 10px;
+  float: left;
+  color: #3C4652;
+}
+#header .logoText span {
+  color: #2D7ABE;
+}
+#header .signinIcon {
+  width: 24px;
+  position: relative;
+  float: right;
+  top: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+#header .signinText {
+  position: relative;
+  top: 28px;
+  font-size: 10pt;
+  margin-right: 10px;
+  float: right;
+  cursor: pointer;
+  color: rgb(13,130,104);
+}
+#header .signinText:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+#footer {
+  width: 100%;
+  height: 40px;
+  background: white;
+}
+#footer .copyrightText {
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+  font-size: 7pt;
+  color: rgb(13,130,104);  /* GREEN */
+}
+
+#footer .socialmediaIcon {
+  width: 16px;
+  position: relative;
+  float: right;
+  top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* CONTENT */
+#content {
+  flex: 1;
+  background: #e8d8dd;
+  padding-bottom: 80px;
+}
+#content .text1 {
+  position: relative;
+  top: 30px;
+  margin-left: 20px;
+  display: block;
+  font-size: 14pt;
+  font-weight: bold;
+  color: rgb(13,130,104);
+}
+#content .text2 {
+  position: relative;
+  top: 40px;
+  margin-left: 20px;
+  display: block;
+  font-size: 32pt;
+  font-weight: bold;
+}
+#content .text3 {
+  position: relative;
+  top: 50px;
+  margin-left: 20px;
+  display: block;
+  font-size: 14pt;
+}
+
+/* SEARCH BAR */
+.searchBar {
+  width: 600px;
+  height: 50px;
+  background-color: white;
+  margin: 80px 0 0 20px;   /* LEFT ALIGN */
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+/* SEARCH TEXT */
+.searchText,
+.searchLocation {
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.searchBar .searchText {
+  width: 290px;
+  height: 40px;
+  font-size: 12pt;
+  border-right: 1px solid silver;
+  background: url('/searchicon.jpg') no-repeat;
+  background-size: 40px 30px;
+  padding-left: 40px;
+  background-position: 0px center;
+}
+
+.searchBar .searchLocation {
+  width: 220px;
+  height: 40px;
+  font-size: 12pt;
+  background: url('/location4.jpg') no-repeat;
+  background-size: 30px 25px;
+  padding-left: 30px;
+  background-position: 0px center;
+}
+
+/* SEARCH BUTTON */
+.searchBar .searchButton {
+  width: 90px;
+  height: 36px;
+  background: rgb(13,130,104);
+  color: white;
+  font-weight: bold;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.searchBar .searchButton:hover {
+  background: rgb(11,110,90);
+}
+
+/* POPUP OVERLAY */
+#popup {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.25);
+  position: fixed;
+  z-index: 999;
+  display: none;
+}
+
+/* POPUP WINDOW */
+#popupWindow {
+  width: 300px;
+  height: 450px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;          /* Center horizontally */
+  transform: translate(-50%, -50%); 
+  border-radius: 5px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.2); /* Optional—nice look */
+}
+
+
+
+/* POPUP HEADER */
+#popupHeader {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: rgb(13,130,104);
+  color: white;
+  font-size: 15pt;
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* SIGNIN */
+#signin {
+  padding: 10px;
+}
+#signin label {
+  color: rgb(13,130,104);
+  font-weight: bold;
+}
+#signin input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid silver;
+  border-radius: 3px;
+}
+#signin .forgotPassword {
+  text-align: right;
+  margin-top: 5px;
+  color: rgb(13,130,104);
+  cursor: pointer;
+}
+#signin .forgotPassword:hover {
+  text-decoration: underline;
+}
+#signin .signinButton {
+  width: 100%;
+  height: 35px;
+  background: rgb(13,130,104);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+#signin .signinButton:hover {
+  background: rgb(11,110,90);
+}
+
+/* SIGNUP */
+#signup {
+  padding: 10px;
+  display: none;
+}
+#signup label {
+  color: rgb(13,130,104);
+  font-weight: bold;
+}
+#signup select,
+#signup input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid silver;
+  border-radius: 3px;
+}
+#signup button {
+  width: 100%;
+  height: 35px;
+  background: rgb(13,130,104);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+#signup button:hover {
+  background: rgb(11,110,90);
+}
+#signup div span {
+  color: rgb(13,130,104);
+  font-weight: bold;
+  cursor: pointer;
+}
+#signup div span:hover {
+  text-decoration: underline;
+}
