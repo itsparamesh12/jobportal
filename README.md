@@ -1,4 +1,57 @@
-Screen shots
+# 🚀 Job Portal Platform (React + Spring Boot Microservices + MySQL + AWS)
+### Objectives
+•	Develop a full-stack web application platform to connect job seekers with employers.
+•	Design a React-based front-end (powered by Vite for build tooling), a back end built with Spring Boot Microservices.
+•	MySQL database for data storage, and deployment on AWS EC2. 
+
+### Functional Requirements
+User Management
+Roles: Job Seekers, Employers, Admin
+### Registration:
+•	Job Seekers and employers can register with unique email addresses.
+•	Validation for unique usernames and passwords.
+•	Passwords are encrypted.
+### Login:
+•	Authenticate users via username/password.
+•	Support token-based authentication using JWT.
+### User Roles :
+•	Job Seekers: Search and apply for jobs. 
+•	Employers: Post and manage job listings.
+•	Admin: Manage users and oversee platform activity.
+### Profile Management:
+Job Seekers: Edit profile details (name ,skills ,resume upload).
+Employers: Manage company profiles and contact information.
+### Job Listings 
+Roles: Job Seekers, Employers 
+Post a job (Employers):
+•	Input fields: Job title, description, required skills, location, salary, job type (full-time/part-time/contract).
+•	Make payment on each job posting (Integrate Payment Gateway).
+ 
+### View Jobs (Job Seekers):
+•	Display job listings with pagination.
+•	Filters: Location, skills, Salary range, Job type
+•	Search functionality with keywords
+Save and Apply	:
+•	Save jobs for later applications.
+•	Apply directly to a job with a single click (attach resume).
+### Manage Listings (Employers):
+•	View/edit/delete posted jobs.
+•	Track applications received for each job 
+
+### Notifications
+Roles: All Users]
+	Email notifications:
+•	Job seekers receive emails for successful applications or status updates.
+•	Employers receive emails for new job applications.
+•	Optional in-app notifications.
+### Admin Panel
+	Roles: Admin
+•	View all users and jobs.
+•	Remove inappropriate content (jobs or users).
+•	Monitor platform activity (e.g., job postings, active users). 
+
+
+### Screen shots
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d0e57b88-5aa4-41ae-af55-4b92e1cdca65" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b210d9d8-c798-41fd-ad2b-9423b6fcea44" />
 
@@ -43,7 +96,7 @@ Screen shots
 
 
 
-###Springboot 
+### Springboot 
 <img width="1878" height="969" alt="image" src="https://github.com/user-attachments/assets/31792aa7-be5a-4c67-b04b-f1ba77ac07f0" />
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4420a1b3-625a-4583-bc66-4d6ae7da11b5" />
